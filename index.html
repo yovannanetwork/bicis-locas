@@ -23,33 +23,34 @@
           <div class="name-container input-box">
             <label for="name" class="sr-only">Nombre</label>
             <input type="text" id="name" class="form-control"
-            placeholder="Ingrese su nombre">
+            placeholder="Ingrese su nombre" autofocus="" onkeyup="validacion1()" onkeydown="validacion2(event)">
           </div>
           <div class="lastname-container input-box">
             <label for="lastname" class="sr-only">Apellido</label>
             <input type="text" id="lastname" class="form-control"
-            placeholder="Ingrese su apellido">
+            placeholder="Ingrese su apellido" onkeyup="validacionApellido()" onkeydown="validacionLastname(event)">
           </div>
           <div class="email-container input-box">
             <label for="inputEmail" class="sr-only">
               Correo Electrónico
             </label>
-            <input type="email" id="input-email" class="form-control" placeholder="Ingrese su correo electrónico" autofocus="">
+            <input type="email" id="input-email" class="form-control" placeholder="Ingrese su correo electrónico">
           </div>
           <div class="form-group">
             <label for="inputPassword" class="sr-only">
               Contraseña
             </label>
-            <input type="password" id="input-password" class="form-control" placeholder="Ingrese su contraseña">
+            <input type="password" id="input-password" class="form-control" placeholder="Ingrese su contraseña" onkeyup="validatePass(event)"/>
           </div>
           <div class="form-group">
-            <select class="form-control">
+            <select class="form-control" onkeydown="validateSelect(event)">
               <option value="0">Selecciona tu tipo de bici</option>
               <option value="urbana">Urbana</option>
               <option value="treking">Treking</option>
               <option value="electrica">Eléctrica</option>
               <option value="estatica">Estática</option>
             </select>
+            <p id="salida"></p>
           </div>
           <div class="input-group">
             <div class="input-group-addon">@</div>
@@ -66,7 +67,7 @@
       </div>  
     </section>
     <!-- /container -->
-    <script type='text/javascript' src='js/main.js'></script>
+    <script type='text/javascript' src="js/main.js"></script>
     <script type='text/javascript' src='js/donottouchthisfile.js'></script>
   </body>
 </html>
